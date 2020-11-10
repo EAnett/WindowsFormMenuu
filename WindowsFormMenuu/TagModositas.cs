@@ -37,7 +37,7 @@ namespace WindowsFormMenuu
 
         private void button_Modositas_Click(object sender, EventArgs e)
         {
-            int azonn = Convert.ToInt32(textBox_Azonodito);
+            int azonn = Convert.ToInt32(textBox_Azonodito.Text);
             if (String.IsNullOrWhiteSpace(textBox_Azonodito.Text.Trim()))
             {
                 MessageBox.Show("Adja meg az azonosítót!!", "Kitöltési Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);

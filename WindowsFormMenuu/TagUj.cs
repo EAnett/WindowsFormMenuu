@@ -38,7 +38,7 @@ namespace WindowsFormMenuu
 
         private void button_Add_Click(object sender, EventArgs e)
         {
-            int azon = Convert.ToInt32(textBox_Azonosito);
+            int azon = Convert.ToInt32(textBox_Azonosito.Text);
             if (String.IsNullOrWhiteSpace(textBox_Azonosito.Text.Trim()))
             {
                 MessageBox.Show("Adja meg az azonosítót!", "Kitöltési Hiba", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -52,7 +52,7 @@ namespace WindowsFormMenuu
                 textBox_Nev.Focus();
                 return;
             }
-            int szulev = Convert.ToInt32(textBox_Szulev);
+            int szulev = Convert.ToInt32(textBox_Szulev.Text);
             if (String.IsNullOrWhiteSpace(textBox_Szulev.Text.Trim()))
             {
                 MessageBox.Show("A születési év mező kitöltése kötelező!", "Kitöltési hiba!", MessageBoxButtons.OK, MessageBoxIcon.Error);
