@@ -88,7 +88,7 @@
             // 
             // dateTimePicker_Datum
             // 
-            this.dateTimePicker_Datum.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePicker_Datum.CustomFormat = "yyyy.MM.dd";
             this.dateTimePicker_Datum.Font = new System.Drawing.Font("Lucida Calligraphy", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker_Datum.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker_Datum.Location = new System.Drawing.Point(241, 222);

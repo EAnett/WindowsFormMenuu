@@ -21,7 +21,6 @@ namespace WindowsFormMenuu
         private void BefizetesLekerdezes_Load(object sender, EventArgs e)
         {
             dataGridView_Lekerdez.ColumnCount = 3;
-            dataGridView_Lekerdez.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView_Lekerdez.Columns[0].Name = "azon";
             dataGridView_Lekerdez.Columns[0].HeaderText = "Azonosító";
             dataGridView_Lekerdez.Columns[1].Name = "datum";
@@ -37,8 +36,9 @@ namespace WindowsFormMenuu
                     {
                         int ujIndex = dataGridView_Lekerdez.Rows.Add();
                         dataGridView_Lekerdez.Rows[ujIndex].Cells[0].Value = dr.GetInt32("azon");
-                        dataGridView_Lekerdez.Rows[ujIndex].Cells[1].Value = dr.GetString("osszeg");
-                        dataGridView_Lekerdez.Rows[ujIndex].Cells[2].Value = dr.GetDateTime("datum").ToString("yyyy-MM-dd");
+                        dataGridView_Lekerdez.Rows[ujIndex].Cells[1].Value = dr.GetDateTime("datum").ToString("yyyy-MM-dd");
+                        dataGridView_Lekerdez.Rows[ujIndex].Cells[2].Value = dr.GetString("osszeg");
+                        
                     }
                 }
             }

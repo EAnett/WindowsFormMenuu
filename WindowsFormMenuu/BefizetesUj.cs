@@ -34,6 +34,7 @@ namespace WindowsFormMenuu
                 return;
             }
             DateTime datum = dateTimePicker_Datum.Value;
+
             int osszeg = Convert.ToInt32(textBox_Osszeg.Text);
             if (String.IsNullOrWhiteSpace(textBox_Osszeg.Text.Trim()))
             {
@@ -41,7 +42,7 @@ namespace WindowsFormMenuu
                 textBox_Osszeg.Focus();
                 return;
             }
-            Program.sql.CommandText = "INSERT INTO `befiz`(`azon`, `datum`, `osszeg`) VALUES ('" + azon + "','" + datum + "','" + osszeg + "')";
+            Program.sql.CommandText = "INSERT INTO `befiz`(`azon`, `datum`, `osszeg`) VALUES('" + azon + "','" + datum.ToString("yyyy-MM-dd") + "','" + osszeg + "')";
             try
             {
                 Program.sql.ExecuteNonQuery();
